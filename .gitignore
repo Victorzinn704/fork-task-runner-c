@@ -1,0 +1,15 @@
+build/
+build-*/
+cmake-build-*/
+compile_commands.json
+Testing/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+fork-task-runner
+test_structures
+test_scheduler
+.cache/
+.scannerwork/

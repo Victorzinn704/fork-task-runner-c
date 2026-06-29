@@ -1,0 +1,20 @@
+Checks: >
+  clang-analyzer-*,
+  -clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling,
+  bugprone-*,
+  cert-err34-c,
+  cert-pos44-c,
+  performance-*,
+  portability-*,
+  readability-braces-around-statements,
+  readability-duplicate-include,
+  readability-function-size,
+  readability-redundant-control-flow
+WarningsAsErrors: >
+  clang-analyzer-*,
+  cert-err34-c
+CheckOptions:
+  - key: readability-function-size.LineThreshold
+    value: '70'
+  - key: readability-function-size.StatementThreshold
+    value: '40'

@@ -1,0 +1,4 @@
+# id|nome|timeout_segundos|comando
+1|Listar diretorio|5|pwd
+2|Executar true|5|true
+3|Pipeline simples|5|printf 'a\nb\n' | wc -l

@@ -1,0 +1,6 @@
+# Fork Task Runner sample
+# Formato: id|nome|timeout_segundos|comando
+1|Listar arquivos|5|ls -la
+2|Simular processamento|4|sleep 2
+3|Contar linhas do README|5|wc -l README.md
+4|Pipeline POSIX|5|printf 'fork\nqueue\nstack\n' | wc -l
