@@ -6,9 +6,9 @@ O projeto está apto para entrega acadêmica como repositório técnico demonstr
 Ele possui código funcional, documentação, referências, testes automatizados, CI,
 análise estática, sanitizers e controle de regressão.
 
-Para uma entrega formal em PDF, recomenda-se exportar `docs/pesquisa-abnt.md` e
-complementar com capa, folha de rosto, resumo, sumário e conclusão conforme o modelo
-exigido pela instituição.
+Para uma entrega formal em PDF, use `docs/dist/fork-task-runner-abnt.pdf` como
+artefato inicial e ajuste capa/folha de rosto conforme o modelo exigido pela
+instituição, se houver um template próprio.
 
 ## Evidências Técnicas
 
@@ -24,6 +24,7 @@ exigido pela instituição.
 | Documentação técnica | Atendido | `docs/arquitetura.md`, `docs/regras-de-negocio.md` |
 | Referências | Atendido | `docs/referencias.md` |
 | Guia de reprodução | Atendido | `docs/guia-de-uso-open-source.md` |
+| PDF acadêmico | Atendido | `docs/dist/fork-task-runner-abnt.pdf` |
 | Limitações declaradas | Atendido | `SECURITY.md` e este documento |
 
 ## O Que O Projeto Demonstra
@@ -74,5 +75,5 @@ ctest --test-dir build --output-on-failure
 ## Conclusão
 
 O repositório está em condição de apresentação como projeto acadêmico e open source.
-A próxima evolução recomendada é gerar um PDF acadêmico com formatação ABNT a partir
-da pesquisa técnica e adicionar capturas ou logs de execução como anexos.
+A próxima evolução recomendada é anexar capturas ou logs de execução ao PDF quando
+a instituição pedir evidência visual da execução.

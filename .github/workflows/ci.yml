@@ -34,3 +34,22 @@ jobs:
 
       - name: CLI smoke
         run: ./build/fork-task-runner tests/fixtures/tasks-success.txt 2 --no-dashboard
+
+  macos-smoke:
+    name: Build and test (macOS clang)
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: brew install cmake ninja
+
+      - name: Configure
+        run: cmake -S . -B build -G Ninja -DFTR_ENABLE_STRICT=ON -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure

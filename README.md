@@ -112,6 +112,25 @@ O segundo argumento da CLI é o limite de processos em paralelo:
 ./build/fork-task-runner examples/tasks.sample.txt 3
 ```
 
+Ajuda e versão:
+
+```bash
+./build/fork-task-runner --help
+./build/fork-task-runner --version
+```
+
+Exemplo com falha e timeout:
+
+```bash
+./build/fork-task-runner examples/tasks.failure-timeout.txt 2 --no-dashboard
+```
+
+Instalação local opcional:
+
+```bash
+cmake --install build --prefix ~/.local
+```
+
 ## Testes
 
 ```bash
@@ -147,6 +166,7 @@ O repositório possui workflows preparados para GitHub Actions:
 - [Controle de regressão](docs/controle-de-regressao.md)
 - [Pesquisa em formato ABNT](docs/pesquisa-abnt.md)
 - [Auditoria de prontidão acadêmica](docs/auditoria-prontidao-academica.md)
+- [PDF acadêmico ABNT](docs/dist/fork-task-runner-abnt.pdf)
 - [Referências](docs/referencias.md)
 - [Radar de repositórios](docs/research/repository-radar.md)
 

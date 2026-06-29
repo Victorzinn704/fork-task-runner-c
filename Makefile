@@ -1,4 +1,4 @@
-.PHONY: configure build test sanitize clean code-health
+.PHONY: configure build test sanitize clean code-health pdf
 
 BUILD_DIR ?= build
 
@@ -18,6 +18,11 @@ sanitize:
 
 code-health:
 	bash scripts/check-code-health.sh
+
+pdf:
+	wkhtmltopdf --encoding utf-8 --enable-local-file-access \
+		docs/academico/fork-task-runner-abnt.html \
+		docs/dist/fork-task-runner-abnt.pdf
 
 clean:
 	rm -rf build build-sanitize

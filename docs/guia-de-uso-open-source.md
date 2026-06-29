@@ -91,6 +91,20 @@ Timeout:     0
 ==================================================
 ```
 
+Ajuda e versão:
+
+```bash
+./build/fork-task-runner --help
+./build/fork-task-runner --version
+```
+
+Instalação local opcional:
+
+```bash
+cmake --install build --prefix ~/.local
+~/.local/bin/fork-task-runner --version
+```
+
 ## 6. Crie Seu Arquivo De Tarefas
 
 Crie `minhas-tarefas.txt`:
@@ -106,6 +120,12 @@ Execute:
 
 ```bash
 ./build/fork-task-runner minhas-tarefas.txt 3
+```
+
+Para observar falha e timeout:
+
+```bash
+./build/fork-task-runner examples/tasks.failure-timeout.txt 2 --no-dashboard
 ```
 
 Formato:

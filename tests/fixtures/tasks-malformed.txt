@@ -1,0 +1,1 @@
+1|Linha sem timeout nem comando

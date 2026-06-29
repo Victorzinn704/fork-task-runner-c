@@ -1,0 +1,2 @@
+# Arquivo sem tarefas executáveis.
+# Deve ser rejeitado pelo loader.

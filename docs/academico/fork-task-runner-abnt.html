@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Fork Task Runner C - Pesquisa Técnica</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 3cm 2cm 2cm 3cm;
+      }
+
+      body {
+        color: #111;
+        font-family: Arial, "Liberation Sans", sans-serif;
+        font-size: 12pt;
+        line-height: 1.5;
+        margin: 0;
+        text-align: justify;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: 700;
+        margin: 18pt 0 10pt;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 14pt;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: 13pt;
+      }
+
+      h3 {
+        font-size: 12pt;
+      }
+
+      p {
+        margin: 0 0 10pt;
+        text-indent: 1.25cm;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 10pt;
+      }
+
+      code,
+      pre {
+        font-family: "Courier New", monospace;
+        font-size: 10pt;
+      }
+
+      pre {
+        background: #f4f4f4;
+        border: 1px solid #ddd;
+        padding: 10pt;
+        white-space: pre-wrap;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 10pt 0;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #999;
+        padding: 6pt;
+        vertical-align: top;
+      }
+
+      th {
+        background: #efefef;
+      }
+
+      .cover {
+        height: 24cm;
+        page-break-after: always;
+        text-align: center;
+      }
+
+      .cover p {
+        text-indent: 0;
+      }
+
+      .institution {
+        font-weight: 700;
+        margin-top: 1cm;
+        text-transform: uppercase;
+      }
+
+      .title {
+        font-size: 14pt;
+        font-weight: 700;
+        margin-top: 7cm;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        margin-top: 0.5cm;
+      }
+
+      .place-date {
+        margin-top: 8cm;
+      }
+
+      .abstract {
+        page-break-after: always;
+      }
+
+      .abstract p {
+        text-indent: 0;
+      }
+
+      .toc {
+        page-break-after: always;
+      }
+
+      .toc p {
+        text-indent: 0;
+      }
+
+      .no-indent {
+        text-indent: 0;
+      }
+
+      .references p {
+        margin-bottom: 8pt;
+        text-indent: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cover">
+      <p class="institution">Projeto Open Source - Sistemas Operacionais E Estruturas De Dados</p>
+      <p class="title">Fork Task Runner C</p>
+      <p class="subtitle">Executor multiprocessos em C com fork, fila, lista, pilha, testes e CI</p>
+      <p class="place-date">Brasil<br>2026</p>
+    </section>
+
+    <section class="abstract">
+      <h1>Resumo</h1>
+      <p>
+        Este trabalho apresenta o Fork Task Runner C, um executor multiprocessos em C
+        desenvolvido para demonstrar o uso de <code>fork()</code> em um fluxo real.
+        O projeto integra fila FIFO, lista encadeada, pilha de eventos, criação de
+        processos, coleta com <code>waitpid()</code>, timeout, testes automatizados e
+        pipelines de qualidade. A proposta é aproximar conceitos de sistemas
+        operacionais e estruturas de dados por meio de um repositório open source
+        reproduzível, documentado e auditável.
+      </p>
+      <p><strong>Palavras-chave:</strong> C; fork; POSIX; escalonamento; estruturas de dados.</p>
+    </section>
+
+    <section class="toc">
+      <h1>Sumário</h1>
+      <p>1 Introdução</p>
+      <p>2 Fundamentação Técnica</p>
+      <p>3 Arquitetura Do Projeto</p>
+      <p>4 Algoritmo E Estruturas De Dados</p>
+      <p>5 Implementação E Uso</p>
+      <p>6 Testes, Qualidade E Segurança</p>
+      <p>7 Limitações</p>
+      <p>8 Conclusão</p>
+      <p>Referências</p>
+    </section>
+
+    <main>
+      <h1>1 Introdução</h1>
+      <p>
+        Exemplos introdutórios de <code>fork()</code> normalmente limitam-se a imprimir
+        o identificador do processo pai e do processo filho. Embora esse tipo de
+        demonstração seja útil para primeiro contato, ele não explica como processos
+        são organizados em um fluxo de execução real. O Fork Task Runner C foi criado
+        para preencher essa lacuna com um executor de tarefas simples, funcional e
+        verificável.
+      </p>
+      <p>
+        O objetivo do projeto é demonstrar como estruturas de dados clássicas podem
+        coordenar processos reais em C. A fila organiza tarefas pendentes, a lista
+        encadeada acompanha processos ativos e a pilha registra eventos recentes do
+        escalonador. O resultado é um projeto pequeno o suficiente para estudo e
+        forte o suficiente para ser auditado por testes, documentação e CI.
+      </p>
+
+      <h1>2 Fundamentação Técnica</h1>
+      <p>
+        A chamada <code>fork()</code> cria um novo processo a partir do processo
+        chamador. O processo filho nasce com uma visão inicial semelhante à do pai,
+        mas executa de forma independente. Em sistemas Unix e Linux modernos, a cópia
+        de memória é otimizada por copy-on-write, reduzindo custo inicial de criação.
+      </p>
+      <p>
+        O padrão <code>fork()</code> seguido de <code>exec</code> é comum em shells e
+        executores de comandos. O filho é criado com <code>fork()</code> e depois
+        substitui sua imagem de processo pelo comando real. O pai permanece responsável
+        por monitorar o ciclo de vida do filho e coletar seu status com
+        <code>waitpid()</code>.
+      </p>
+
+      <h1>3 Arquitetura Do Projeto</h1>
+      <p>
+        A arquitetura separa domínio, estruturas, aplicação, infraestrutura e
+        apresentação. O processo pai é a única fonte de verdade do estado interno. Os
+        filhos executam comandos isolados e não alteram diretamente a fila, a lista ou
+        a pilha.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Camada</th>
+            <th>Responsabilidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Domínio</td>
+            <td>Define tarefa, status e evento.</td>
+          </tr>
+          <tr>
+            <td>Estruturas</td>
+            <td>Implementa fila, lista encadeada e pilha.</td>
+          </tr>
+          <tr>
+            <td>Aplicação</td>
+            <td>Executa regras do scheduler FCFS com concorrência limitada.</td>
+          </tr>
+          <tr>
+            <td>Infraestrutura</td>
+            <td>Lê arquivos e executa chamadas POSIX de processo.</td>
+          </tr>
+          <tr>
+            <td>Apresentação</td>
+            <td>Renderiza painel terminal e relatório final.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1>4 Algoritmo E Estruturas De Dados</h1>
+      <p>
+        O algoritmo escolhido é FCFS com concorrência limitada. A primeira tarefa que
+        entra na fila é a primeira candidata à execução, desde que exista um slot
+        livre dentro do limite <code>max_parallel</code>.
+      </p>
+      <ol>
+        <li>O arquivo de tarefas é carregado para uma fila FIFO.</li>
+        <li>O scheduler remove a próxima tarefa quando há capacidade.</li>
+        <li>O pai cria um filho com <code>fork()</code>.</li>
+        <li>O filho executa o comando via shell.</li>
+        <li>O pai registra o PID na lista de processos ativos.</li>
+        <li>O pai usa <code>waitpid()</code> para coletar conclusão.</li>
+        <li>Eventos de início, sucesso, falha e timeout entram na pilha.</li>
+      </ol>
+      <table>
+        <thead>
+          <tr>
+            <th>Estrutura</th>
+            <th>Uso</th>
+            <th>Complexidade Principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fila</td>
+            <td>Tarefas pendentes</td>
+            <td>Inserção e remoção O(1)</td>
+          </tr>
+          <tr>
+            <td>Lista encadeada</td>
+            <td>Processos ativos</td>
+            <td>Inserção O(1), remoção por PID O(n)</td>
+          </tr>
+          <tr>
+            <td>Pilha</td>
+            <td>Eventos recentes</td>
+            <td>Inserção e remoção O(1)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1>5 Implementação E Uso</h1>
+      <p>
+        O projeto pode ser compilado com CMake em Linux, macOS ou WSL 2. O Windows
+        nativo não é suportado porque o projeto depende de chamadas POSIX.
+      </p>
+      <pre>git clone https://github.com/Victorzinn704/fork-task-runner-c.git
+cd fork-task-runner-c
+cmake -S . -B build -G Ninja -DFTR_ENABLE_STRICT=ON -DCMAKE_BUILD_TYPE=Debug
+cmake --build build
+ctest --test-dir build --output-on-failure
+./build/fork-task-runner examples/tasks.sample.txt 2 --no-dashboard</pre>
+      <p>
+        O arquivo de tarefas usa o formato
+        <code>id|nome|timeout_segundos|comando</code>. O comando fica no último campo
+        para permitir pipelines POSIX com o caractere <code>|</code>.
+      </p>
+
+      <h1>6 Testes, Qualidade E Segurança</h1>
+      <p>
+        O repositório possui testes unitários para as estruturas de dados, testes de
+        integração para scheduler, falha e timeout, além de testes de CLI. A esteira
+        de GitHub Actions executa CI com GCC e Clang, qualidade com
+        <code>clang-format</code>, <code>clang-tidy</code>, <code>cppcheck</code>,
+        sanitizers, CodeQL, Valgrind e lint de documentação.
+      </p>
+      <p>
+        O projeto executa comandos com <code>/bin/sh -c</code> e, por isso, não deve
+        receber arquivos de tarefas não confiáveis. Essa limitação está documentada no
+        arquivo <code>SECURITY.md</code>.
+      </p>
+
+      <h1>7 Limitações</h1>
+      <ul>
+        <li>Não há suporte para Windows nativo.</li>
+        <li>Não há sandbox de comandos.</li>
+        <li>Não há prioridade, preempção ou memória compartilhada.</li>
+        <li>O projeto não substitui ferramentas reais de CI ou orquestração.</li>
+      </ul>
+
+      <h1>8 Conclusão</h1>
+      <p>
+        O Fork Task Runner C cumpre seu objetivo acadêmico e técnico: demonstrar
+        processos reais com <code>fork()</code> dentro de um fluxo organizado por
+        estruturas de dados clássicas. A solução preserva baixa complexidade, possui
+        documentação reproduzível e apresenta critérios de qualidade compatíveis com
+        um repositório open source inicial.
+      </p>
+
+      <section class="references">
+        <h1>Referências</h1>
+        <p>KERRISK, Michael. <strong>fork(2) — Linux manual page</strong>. Disponível em: https://man7.org/linux/man-pages/man2/fork.2.html. Acesso em: 29 jun. 2026.</p>
+        <p>KERRISK, Michael. <strong>waitpid(2) — Linux manual page</strong>. Disponível em: https://man7.org/linux/man-pages/man2/waitpid.2.html. Acesso em: 29 jun. 2026.</p>
+        <p>KERRISK, Michael. <strong>execve(2) — Linux manual page</strong>. Disponível em: https://man7.org/linux/man-pages/man2/execve.2.html. Acesso em: 29 jun. 2026.</p>
+        <p>THE OPEN GROUP. <strong>fork — The Open Group Base Specifications</strong>. Disponível em: https://pubs.opengroup.org/onlinepubs/9799919799/functions/fork.html. Acesso em: 29 jun. 2026.</p>
+        <p>REDIS. <strong>Redis persistence</strong>. Disponível em: https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/. Acesso em: 29 jun. 2026.</p>
+        <p>CMAKE. <strong>CTest manual</strong>. Disponível em: https://cmake.org/cmake/help/latest/manual/ctest.1.html. Acesso em: 29 jun. 2026.</p>
+        <p>GITHUB. <strong>About code scanning with CodeQL</strong>. Disponível em: https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql. Acesso em: 29 jun. 2026.</p>
+      </section>
+    </main>
+  </body>
+</html>

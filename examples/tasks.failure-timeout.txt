@@ -1,0 +1,5 @@
+# Exemplos de falha e timeout.
+# Formato: id|nome|timeout_segundos|comando
+1|Comando bem-sucedido|5|true
+2|Comando com falha|5|false
+3|Comando lento|1|sleep 3
