@@ -1,5 +1,10 @@
 # Fork Task Runner C
 
+[![CI](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/ci.yml/badge.svg)](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/ci.yml)
+[![Quality](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/quality.yml/badge.svg)](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/quality.yml)
+[![Security](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/security.yml/badge.svg)](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/security.yml)
+[![Docs](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/docs.yml/badge.svg)](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/docs.yml)
+
 Executor multiprocessos em C para demonstrar `fork()` em um processo real, usando fila,
 lista encadeada e pilha com regras de negócio claras, testes automatizados e pipelines
 de qualidade.
@@ -30,7 +35,37 @@ podem coordenar processos reais em C:
 `fork()` é uma chamada POSIX; por isso, o projeto não foi desenhado para Windows
 nativo.
 
+## Instalação Das Dependências
+
+Ubuntu, Debian ou WSL 2:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y git cmake gcc clang make ninja-build
+```
+
+Ferramentas opcionais para auditoria local:
+
+```bash
+sudo apt-get install -y clang-format clang-tidy cppcheck valgrind
+```
+
+macOS com Homebrew:
+
+```bash
+brew install git cmake ninja llvm cppcheck
+```
+
 ## Execução Rápida
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Victorzinn704/fork-task-runner-c.git
+cd fork-task-runner-c
+```
+
+Compile e execute o exemplo:
 
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
@@ -50,6 +85,18 @@ Execução sem painel ANSI, útil para CI:
 ./build/fork-task-runner examples/tasks.sample.txt 2 --no-dashboard
 ```
 
+Saída final esperada:
+
+```txt
+================== FINAL REPORT ==================
+Total tasks: 4
+Started:     4
+Finished:    4
+Failed:      0
+Timeout:     0
+==================================================
+```
+
 Formato do arquivo de tarefas:
 
 ```txt
@@ -57,6 +104,12 @@ id|nome|timeout_segundos|comando
 1|Listar arquivos|5|ls -la
 2|Simular processamento|4|sleep 2
 3|Pipeline POSIX|5|printf 'fork\nqueue\nstack\n' | wc -l
+```
+
+O segundo argumento da CLI é o limite de processos em paralelo:
+
+```bash
+./build/fork-task-runner examples/tasks.sample.txt 3
 ```
 
 ## Testes
@@ -87,11 +140,13 @@ O repositório possui workflows preparados para GitHub Actions:
 ## Documentação
 
 - [Índice](docs/INDEX.md)
+- [Guia de uso open source](docs/guia-de-uso-open-source.md)
 - [Arquitetura](docs/arquitetura.md)
 - [Regras de negócio](docs/regras-de-negocio.md)
 - [Estratégia de testes](docs/estrategia-de-testes.md)
 - [Controle de regressão](docs/controle-de-regressao.md)
 - [Pesquisa em formato ABNT](docs/pesquisa-abnt.md)
+- [Auditoria de prontidão acadêmica](docs/auditoria-prontidao-academica.md)
 - [Referências](docs/referencias.md)
 - [Radar de repositórios](docs/research/repository-radar.md)
 
