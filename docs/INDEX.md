@@ -9,12 +9,13 @@ Este diretório concentra a documentação canônica do Fork Task Runner C.
 3. [Estratégia de testes](estrategia-de-testes.md)
 4. [Controle de regressão](controle-de-regressao.md)
 5. [Guia de uso open source](guia-de-uso-open-source.md)
-6. [Pesquisa em formato ABNT](pesquisa-abnt.md)
-7. [Auditoria de prontidão acadêmica](auditoria-prontidao-academica.md)
-8. [PDF acadêmico ABNT](dist/fork-task-runner-abnt.pdf)
-9. [Referências](referencias.md)
-10. [Radar de repositórios](research/repository-radar.md)
-11. [Publicação e redes](publicacao-e-redes.md)
+6. [Auditoria de funcionamento](auditoria-funcionamento/README.md)
+7. [Pesquisa em formato ABNT](pesquisa-abnt.md)
+8. [Auditoria de prontidão acadêmica](auditoria-prontidao-academica.md)
+9. [PDF acadêmico ABNT](dist/fork-task-runner-abnt.pdf)
+10. [Referências](referencias.md)
+11. [Radar de repositórios](research/repository-radar.md)
+12. [Publicação e redes](publicacao-e-redes.md)
 
 ## Critério De Pronto
 

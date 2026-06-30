@@ -1,0 +1,47 @@
+Caso: 04-success-run
+Data: 2026-06-29T21:49:07-03:00
+Diretorio: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c
+Comando: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit/fork-task-runner /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/examples/tasks.sample.txt 2 --no-dashboard
+
+total 28
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 21:49 .
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 14:20 ..
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 21:49 .cache
+-rwxrwxrwx 1 dev_victor dev_victor  203 Jun 29 14:24 .clang-format
+-rwxrwxrwx 1 dev_victor dev_victor  526 Jun 29 14:31 .clang-tidy
+-rwxrwxrwx 1 dev_victor dev_victor  188 Jun 29 14:24 .editorconfig
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 21:45 .git
+-rwxrwxrwx 1 dev_victor dev_victor  153 Jun 29 21:48 .gitattributes
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 14:56 .github
+-rwxrwxrwx 1 dev_victor dev_victor  159 Jun 29 14:33 .gitignore
+-rwxrwxrwx 1 dev_victor dev_victor   75 Jun 29 14:46 .markdownlint.json
+-rwxrwxrwx 1 dev_victor dev_victor  666 Jun 29 21:48 CHANGELOG.md
+-rwxrwxrwx 1 dev_victor dev_victor 4100 Jun 29 15:02 CMakeLists.txt
+-rwxrwxrwx 1 dev_victor dev_victor  723 Jun 29 14:25 CONTRIBUTING.md
+-rwxrwxrwx 1 dev_victor dev_victor 1056 Jun 29 14:25 LICENSE
+-rwxrwxrwx 1 dev_victor dev_victor  664 Jun 29 14:59 Makefile
+-rwxrwxrwx 1 dev_victor dev_victor 5134 Jun 29 21:48 README.md
+-rwxrwxrwx 1 dev_victor dev_victor  666 Jun 29 14:25 SECURITY.md
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 15:03 build
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 21:49 build-audit
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 14:31 build-clang
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 15:03 build-sanitize
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 21:44 docs
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 14:56 examples
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 14:20 include
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 21:45 scripts
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 14:23 src
+drwxrwxrwx 1 dev_victor dev_victor 4096 Jun 29 14:31 tests
+182 README.md
+3
+
+================== FINAL REPORT ==================
+Total tasks: 4
+Started:     4
+Finished:    4
+Failed:      0
+Timeout:     0
+Elapsed:     2s
+==================================================
+
+Exit code: 0

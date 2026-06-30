@@ -1,0 +1,52 @@
+Caso: 07-install
+Data: 2026-06-29T21:49:10-03:00
+Diretorio: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c
+Comando: bash -lc cmake --install '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit' --prefix '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install' && '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/bin/fork-task-runner' --version && test -f '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/dist/fork-task-runner-abnt.pdf'
+
+-- Install configuration: "Debug"
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/bin/fork-task-runner
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/README.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/LICENSE
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/CHANGELOG.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/academico
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/academico/fork-task-runner-abnt.html
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/academico/README.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/arquitetura.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias/01-build-test.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias/02-cli-help.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias/03-cli-version.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias/04-success-run.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias/05-failure-timeout-run.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias/06-invalid-file.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/evidencias/07-install.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/README.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots/01-build-test.png
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots/02-cli-help.png
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots/03-cli-version.png
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots/04-success-run.png
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots/05-failure-timeout-run.png
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots/06-invalid-file.png
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-funcionamento/screenshots/07-install.png
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/auditoria-prontidao-academica.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/controle-de-regressao.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/dist
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/dist/fork-task-runner-abnt.pdf
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/estrategia-de-testes.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/guia-de-uso-open-source.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/INDEX.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/pesquisa-abnt.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/publicacao-e-redes.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/referencias.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/regras-de-negocio.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/research
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/docs/research/repository-radar.md
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/examples
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/examples/tasks.failure-timeout.txt
+-- Installing: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/.cache/audit-install/share/doc/fork-task-runner/examples/tasks.sample.txt
+fork-task-runner 0.1.0
+
+Exit code: 0

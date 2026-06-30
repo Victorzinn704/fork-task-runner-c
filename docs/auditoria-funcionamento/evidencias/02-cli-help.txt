@@ -1,0 +1,19 @@
+Caso: 02-cli-help
+Data: 2026-06-29T21:49:07-03:00
+Diretorio: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c
+Comando: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit/fork-task-runner --help
+
+Uso: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit/fork-task-runner <arquivo-tarefas> [max-parallel] [--no-dashboard]
+
+Opcoes:
+  -h, --help       Mostra esta ajuda.
+  -V, --version    Mostra a versao do programa.
+  --no-dashboard   Desativa o painel ANSI e imprime apenas o relatorio final.
+
+Formato do arquivo:
+  id|nome|timeout_segundos|comando
+
+Exemplo:
+  1|Listar arquivos|5|ls -la
+
+Exit code: 0

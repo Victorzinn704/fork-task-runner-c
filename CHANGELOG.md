@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Adiciona auditoria de funcionamento com logs brutos, screenshots e script de
+  reprodução local.
+
 ## 0.1.0 - 2026-06-29
 
 - Cria executor multiprocessos com `fork()` e `exec`.

@@ -1,0 +1,16 @@
+Caso: 05-failure-timeout-run
+Data: 2026-06-29T21:49:09-03:00
+Diretorio: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c
+Comando: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit/fork-task-runner /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/examples/tasks.failure-timeout.txt 2 --no-dashboard
+
+
+================== FINAL REPORT ==================
+Total tasks: 3
+Started:     3
+Finished:    1
+Failed:      1
+Timeout:     1
+Elapsed:     1s
+==================================================
+
+Exit code: 1

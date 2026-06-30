@@ -6,4 +6,5 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.pdf binary
+*.png binary
 Makefile text eol=lf

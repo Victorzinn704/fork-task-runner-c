@@ -1,0 +1,55 @@
+Caso: 01-build-test
+Data: 2026-06-29T21:49:03-03:00
+Diretorio: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c
+Comando: bash -lc cmake -S '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c' -B '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit' -G Ninja -DFTR_ENABLE_STRICT=ON -DCMAKE_BUILD_TYPE=Debug && cmake --build '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit' && ctest --test-dir '/mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit' --output-on-failure
+
+-- The C compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit
+[1/17] Building C object CMakeFiles/ftr_core.dir/src/structures/process_list.c.o
+[2/17] Building C object CMakeFiles/ftr_core.dir/src/structures/event_stack.c.o
+[3/17] Building C object CMakeFiles/ftr_core.dir/src/domain/task.c.o
+[4/17] Building C object CMakeFiles/ftr_core.dir/src/structures/task_queue.c.o
+[5/17] Building C object CMakeFiles/ftr_core.dir/src/infrastructure/process_runner.c.o
+[6/17] Building C object CMakeFiles/ftr_core.dir/src/infrastructure/task_loader.c.o
+[7/17] Building C object CMakeFiles/ftr_core.dir/src/presentation/terminal_dashboard.c.o
+[8/17] Building C object CMakeFiles/fork-task-runner.dir/src/main.c.o
+[9/17] Building C object CMakeFiles/ftr_core.dir/src/application/scheduler.c.o
+[10/17] Building C object CMakeFiles/test_structures.dir/tests/unit/test_structures.c.o
+[11/17] Building C object CMakeFiles/test_task_loader.dir/tests/unit/test_task_loader.c.o
+[12/17] Building C object CMakeFiles/test_scheduler.dir/tests/integration/test_scheduler.c.o
+[13/17] Linking C static library libftr_core.a
+[14/17] Linking C executable test_structures
+[15/17] Linking C executable test_scheduler
+[16/17] Linking C executable fork-task-runner
+[17/17] Linking C executable test_task_loader
+Internal ctest changing into directory: /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit
+Test project /mnt/c/Users/Desktop/Documents/desk-imperial/fork-task-runner-c/build-audit
+    Start 1: unit.structures
+1/8 Test #1: unit.structures ..................   Passed    0.00 sec
+    Start 2: unit.task_loader
+2/8 Test #2: unit.task_loader .................   Passed    0.01 sec
+    Start 3: integration.scheduler
+3/8 Test #3: integration.scheduler ............   Passed    1.03 sec
+    Start 4: integration.cli_help
+4/8 Test #4: integration.cli_help .............   Passed    0.00 sec
+    Start 5: integration.cli_version
+5/8 Test #5: integration.cli_version ..........   Passed    0.00 sec
+    Start 6: integration.cli_invalid_args
+6/8 Test #6: integration.cli_invalid_args .....   Passed    0.00 sec
+    Start 7: integration.cli_success
+7/8 Test #7: integration.cli_success ..........   Passed    0.51 sec
+    Start 8: integration.cli_invalid_file
+8/8 Test #8: integration.cli_invalid_file .....   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Total Test time (real) =   1.61 sec
+
+Exit code: 0

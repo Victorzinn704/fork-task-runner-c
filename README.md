@@ -165,6 +165,7 @@ O repositório possui workflows preparados para GitHub Actions:
 - [Estratégia de testes](docs/estrategia-de-testes.md)
 - [Controle de regressão](docs/controle-de-regressao.md)
 - [Pesquisa em formato ABNT](docs/pesquisa-abnt.md)
+- [Auditoria de funcionamento](docs/auditoria-funcionamento/README.md)
 - [Auditoria de prontidão acadêmica](docs/auditoria-prontidao-academica.md)
 - [PDF acadêmico ABNT](docs/dist/fork-task-runner-abnt.pdf)
 - [Referências](docs/referencias.md)
