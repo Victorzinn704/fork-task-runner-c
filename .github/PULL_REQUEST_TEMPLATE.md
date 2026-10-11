@@ -15,4 +15,10 @@
 
 ## Risco Residual
 
-- 
+-
+
+## Rastreabilidade
+
+Closes #<!-- número da issue -->
+
+Informe os comandos executados e os resultados reais. Siga o [fluxo Git](../CONTRIBUTING-GIT.md).
