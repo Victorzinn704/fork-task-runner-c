@@ -28,3 +28,7 @@ O PR deve informar:
 - regra de negócio impactada;
 - testes executados;
 - risco residual, se houver.
+
+## Fluxo Git e revisão
+
+Siga também o [fluxo de issues, branches, commits e pull requests](CONTRIBUTING-GIT.md).
