@@ -1,5 +1,7 @@
 # Fork Task Runner C
 
+[English quick start](docs/quickstart.en.md) — build, run and test this C11/POSIX task runner.
+
 [![CI](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/ci.yml/badge.svg)](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/ci.yml)
 [![Quality](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/quality.yml/badge.svg)](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/quality.yml)
 [![Security](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/security.yml/badge.svg)](https://github.com/Victorzinn704/fork-task-runner-c/actions/workflows/security.yml)
@@ -73,11 +75,13 @@ cmake --build build
 ./build/fork-task-runner examples/tasks.sample.txt 2
 ```
 
-Atalho equivalente:
+Para compilar e executar os testes automatizados:
 
 ```bash
 make test
 ```
+
+Esse comando executa o CTest; para ver as quatro tarefas do exemplo, use a CLI acima.
 
 Execução sem painel ANSI, útil para CI:
 
